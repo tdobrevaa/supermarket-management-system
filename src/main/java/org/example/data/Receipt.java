@@ -7,14 +7,14 @@ public class Receipt {
     private long serialNumber;
     private Cashier cashier;
     private LocalDateTime dateTime;
-    private List<Good> goods;
+    private List<ReceiptItem> receiptItems;
     private double total;
 
-    public Receipt(long serialNumber, Cashier cashier, LocalDateTime dateTime, List<Good> goods, double total) {
+    public Receipt(long serialNumber, Cashier cashier, LocalDateTime dateTime, List<ReceiptItem> receiptItems, double total) {
         this.serialNumber = serialNumber;
         this.cashier = cashier;
         this.dateTime = dateTime;
-        this.goods = goods;
+        this.receiptItems = receiptItems;
         this.total = total;
     }
 
@@ -42,12 +42,12 @@ public class Receipt {
         this.dateTime = dateTime;
     }
 
-    public List<Good> getGoods() {
-        return goods;
+    public List<ReceiptItem> getReceiptItems() {
+        return receiptItems;
     }
 
-    public void setGoods(List<Good> goods) {
-        this.goods = goods;
+    public void setReceiptItems(List<ReceiptItem> receiptItems) {
+        this.receiptItems = receiptItems;
     }
 
     public double getTotal() {
@@ -64,7 +64,7 @@ public class Receipt {
                 "serialNumber=" + serialNumber +
                 ", cashier=" + cashier +
                 ", dateTime=" + dateTime +
-                ", goods=" + goods +
+                ", receiptItems=" + receiptItems +
                 ", total=" + total +
                 '}';
     }
