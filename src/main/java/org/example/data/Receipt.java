@@ -1,9 +1,11 @@
 package org.example.data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
-public class Receipt {
+public class Receipt implements Serializable {
     private long serialNumber;
     private Cashier cashier;
     private LocalDateTime dateTime;
@@ -14,7 +16,7 @@ public class Receipt {
         this.serialNumber = serialNumber;
         this.cashier = cashier;
         this.dateTime = dateTime;
-        this.receiptItems = receiptItems;
+        this.receiptItems = new ArrayList<>();
         this.total = total;
     }
 

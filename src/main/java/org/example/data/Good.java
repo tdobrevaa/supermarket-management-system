@@ -2,9 +2,10 @@ package org.example.data;
 
 import org.example.enums.Category;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Good {
+public class Good implements Serializable {
     private long id;
     private String name;
     private double deliveryPrice;

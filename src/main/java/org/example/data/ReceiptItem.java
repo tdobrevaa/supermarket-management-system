@@ -1,6 +1,8 @@
 package org.example.data;
 
-public class ReceiptItem {
+import java.io.Serializable;
+
+public class ReceiptItem implements Serializable {
     private Good good;
     private double sellingPrice;
     private int quantity;
